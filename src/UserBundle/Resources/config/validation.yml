@@ -1,0 +1,20 @@
+UserBundle\Entity\User:
+    constraints:
+            - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: login
+    properties:
+        login:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 50
+                minMessage: "Login must be at least 2 characters length"
+                maxMessage: "Login cannot be longer than 50 characters length"
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 250
+                minMessage: "Login must be at least 2 characters length"
+                maxMessage: "Login cannot be longer than 250 characters length"

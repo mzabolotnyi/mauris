@@ -1,0 +1,12 @@
+home:
+    defaults: { _controller: AppBundle:Default:index, _format: html}
+    path: "/"
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix: "/doc"
+
+api:
+    type: rest
+    resource: "routing_api.yml"
+    prefix: "/api"

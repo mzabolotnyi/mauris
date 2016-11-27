@@ -1,0 +1,34 @@
+get_user:
+    pattern:  /users/{id}
+    defaults: { _controller: UserBundle:Users:get, _format: ~ }
+    methods: [GET]
+
+get_users:
+    pattern:  /users
+    defaults: { _controller: UserBundle:Users:cget, _format: ~ }
+    methods: [GET]
+
+post_user:
+    pattern:  /users
+    defaults: { _controller: UserBundle:Users:post, _format: ~ }
+    methods: [POST]
+
+put_user:
+    pattern:  /users/{id}
+    defaults: { _controller: UserBundle:Users:put, _format: ~ }
+    methods: [PUT, PATCH]
+
+delete_user:
+    pattern:  /users/{id}
+    defaults: { _controller: UserBundle:Users:delete, _format: ~ }
+    methods: [DELETE]
+
+post_user_visit:
+    pattern:  /users/{id}/visit
+    defaults: { _controller: UserBundle:Users:postVisit, _format: ~ }
+    methods: [POST]
+
+get_dau:
+    pattern:  /users/statistics/dau
+    defaults: { _controller: UserBundle:Users:dau, _format: ~ }
+    methods: [GET]
